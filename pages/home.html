@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge - Learning Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    
+    <div class="global-background-overlay">
+        <i class="fa-solid fa-graduation-cap bg-float-icon" style="top: 10%; left: 5%; font-size: 60px;"></i>
+        <i class="fa-solid fa-code-branch bg-float-icon" style="top: 20%; right: 10%; font-size: 80px; animation-delay: 1s;"></i>
+        <i class="fa-solid fa-laptop-code bg-float-icon" style="bottom: 15%; left: 10%; font-size: 50px; animation-delay: 2s;"></i>
+        <i class="fa-solid fa-database bg-float-icon" style="top: 40%; left: 40%; font-size: 40px; animation-delay: 3s;"></i>
+        <i class="fa-solid fa-brain bg-float-icon" style="top: 15%; right: 30%; font-size: 45px; animation-delay: 1.5s;"></i>
+        <i class="fa-solid fa-chart-line bg-float-icon" style="bottom: 30%; right: 5%; font-size: 70px; animation-delay: 0.5s;"></i>
+        <i class="fa-solid fa-server bg-float-icon" style="top: 55%; left: 5%; font-size: 35px; animation-delay: 4s;"></i>
+        <i class="fa-solid fa-network-wired bg-float-icon" style="bottom: 10%; left: 40%; font-size: 55px; animation-delay: 2.5s;"></i>
+        <i class="fa-solid fa-microchip bg-float-icon" style="top: 5%; right: 5%; font-size: 30px; animation-delay: 3.5s;"></i>
+        <i class="fa-solid fa-cloud bg-float-icon" style="top: 30%; left: 20%; font-size: 40px; animation-delay: 1s;"></i>
+        <i class="fa-solid fa-terminal bg-float-icon" style="bottom: 40%; right: 20%; font-size: 50px; animation-delay: 2.2s;"></i>
+        <i class="fa-solid fa-lightbulb bg-float-icon" style="top: 70%; left: 80%; font-size: 45px; animation-delay: 0.8s;"></i>
+        <i class="fa-solid fa-rocket bg-float-icon" style="top: 50%; right: 50%; font-size: 60px; opacity: 0.03; animation-delay: 4s;"></i>
+        <i class="fa-solid fa-briefcase bg-float-icon" style="bottom: 5%; right: 40%; font-size: 40px; animation-delay: 1.2s;"></i>
+        <i class="fa-solid fa-layer-group bg-float-icon" style="top: 80%; left: 25%; font-size: 38px; animation-delay: 3s;"></i>
+        <i class="fa-solid fa-file-code bg-float-icon" style="top: 12%; left: 60%; font-size: 32px; animation-delay: 1.8s;"></i>
+        <i class="fa-solid fa-magnifying-glass-chart bg-float-icon" style="bottom: 25%; left: 2%; font-size: 42px; animation-delay: 2.7s;"></i>
+        <i class="fa-solid fa-gears bg-float-icon" style="top: 35%; right: 5%; font-size: 48px; animation-delay: 0.3s;"></i>
+    </div>
+
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <svg class="nav-logo-svg" width="36" height="36" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.58 181.04"><defs><style>.cls-1 { fill: #4445ff; stroke-width: 0px; }</style></defs><path class="cls-1" d="M418.58,90.22c0,6.08-4.92,11-11,11-43.1,0-82.86-19.51-109.15-51.81v51.77c0,6.08-4.92,11-11,11s-11-4.92-11-11V31.64c-20.46,11.19-43.32,17.01-67.14,17.01-10.95,0-21.71-1.23-32.12-3.66l115.17,106.05h75.66c6.08,0,11,4.92,11,11s-4.92,11-11,11h-79.95c-2.76,0-5.42-1.04-7.45-2.91L141.53,42.08v127.96c0,6.07-4.92,11-11,11s-11-4.93-11-11V50.16c-26.29,31.86-65.77,51.06-108.53,51.06-6.08,0-11-4.92-11-11s4.92-11,11-11c47.82,0,90.76-28.46,109.4-72.51,1.33-3.13,4.03-5.48,7.32-6.35,3.29-.86,6.8-.16,9.5,1.91,20.82,15.95,45.75,24.38,72.07,24.38s49.23-7.76,69.52-22.49c2.02-2.54,5.13-4.16,8.62-4.16.15,0,.3,0,.45,0,1-.02,2,.09,2.98.35,3.29.87,5.99,3.22,7.32,6.35,18.64,44.05,61.58,72.51,109.4,72.51,6.08,0,11,4.93,11,11Z"/></svg>
+                <span class="nav-title">SkillBridge</span>
+            </a>
+            <ul class="nav-links">
+                <li class="selected"><a href="#">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="roadmaps.html">Roadmaps</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <a href="login.html" class="btn-outline">Sign In</a>
+                <a href="login.html" class="btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="welcome-banner">
+            <section class="hero-content">
+                <div class="leftside-hero">
+                    <h1>Build the Skills for <span>Your Future Career</span></h1>
+                    <p class="hero-desc">Understand what skills employers actually want and follow a clear, data-driven path to your target career.</p>
+                    <span class="hero-sub-desc">SkillBridge analyzes real job market data to show you the exact skills needed for your target career—and how to learn them step by step.</span>
+                    <br>
+                    <a href="#" class="hero-btn">Get Started Now</a>
+                </div>
+                <div class="rightside-hero">
+                    <img src="../assets/img/banner-hero-image.gif" alt="Career Growth Animation">
+                </div>
+            </section>
+        </div>
+
+        <section class="features-section">
+            <div class="how-it-works-grid">
+                <div class="step-card glass-panel">
+                    <div class="step-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="step-title">Step 1 – Choose a Career</h3>
+                    <p class="step-desc">Select a job role you’re interested in.</p>
+                </div>
+                <div class="step-card glass-panel">
+                    <div class="step-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3 class="step-title">Step 2 – Discover Skills</h3>
+                    <p class="step-desc">We analyze job postings to extract in-demand skills.</p>
+                </div>
+                <div class="step-card glass-panel">
+                    <div class="step-icon"><i class="fa-solid fa-route"></i></div>
+                    <h3 class="step-title">Step 3 – Learn & Track</h3>
+                    <p class="step-desc">Follow a personalized roadmap and track your progress.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="roadmap-split-container glass-panel">
+                <div class="map-pane">
+                    
+                    <div class="map-header-static">
+                        <div class="map-header-content">
+                            <h3>Interactive Career Roadmap</h3>
+                            <p>Explore skill paths, compare career options, and see where each choice leads.</p>
+                        </div>
+                        <a href="dashboard.html" class="dashboard-action-btn">
+                            Visit dashboard for personalized progress <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+
+                    <div class="skill-gap-alert">
+                        <div class="gap-chart"></div>
+                        <div class="gap-text">
+                            <h4>Career Readiness: 62%</h4>
+                            <p>You're missing 4 key skills for this role</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-wrapper" id="roadmapWrapper">
+                        <div id="roadmap-container"></div>
+                        <div class="roadmap-floating-bar">
+                            <div class="prompt-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <input type="text" class="prompt-input" placeholder="Enter a career goal (e.g., Data Scientist, UI/UX Designer)..." id="profInput">
+                            <button class="prompt-send-btn" onclick="simulateLoading()"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                        <div class="map-controls">
+                            <button class="map-btn" onclick="zoomIn()"><i class="fa-solid fa-plus"></i></button>
+                            <button class="map-btn" onclick="zoomOut()"><i class="fa-solid fa-minus"></i></button>
+                            <button class="map-btn" onclick="resetView()"><i class="fa-solid fa-compress"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-pane">
+                    <div class="courses-header">
+                        <h3>Learning Resources for This Skill</h3>
+                        <span class="selected-skill-label" id="skillLabel">Select a node on the map</span>
+                    </div>
+                    <div class="courses-scroll-area" id="coursesList">
+                        <div style="text-align: center; color: var(--text-secondary); margin-top: 50px;">
+                            <i class="fa-solid fa-arrow-left" style="font-size: 24px; margin-bottom: 10px;"></i>
+                            <p>Click on any roadmap point<br>to view learning resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-section-cards">
+            <h3 class="why-title">Why SkillBridge?</h3>
+            <div class="why-grid-cards">
+                <div class="why-card glass-panel">
+                    <div class="why-icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div class="why-card-text">Based on real Sri Lankan job market data</div>
+                </div>
+                <div class="why-card glass-panel">
+                    <div class="why-icon-box"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="why-card-text">Skill-focused, not just job titles</div>
+                </div>
+                <div class="why-card glass-panel">
+                    <div class="why-icon-box"><i class="fa-solid fa-sitemap"></i></div>
+                    <div class="why-card-text">Visual career roadmaps & paths</div>
+                </div>
+                <div class="why-card glass-panel">
+                    <div class="why-icon-box"><i class="fa-solid fa-user-gear"></i></div>
+                    <div class="why-card-text">Personalized skill gap insights</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 class="cta-title">Start building the skills employers are looking for today.</h2>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Get Personalized Roadmap</a>
+                <a href="#" class="btn-outline">Explore Careers</a>
+            </div>
+        </section>
+
+        <footer class="reva-footer">
+            <div class="reva-footer-container">
+                <div class="footer-section">
+                    <h3>SkillBridge</h3>
+                    <p>SkillBridge is an AI-powered platform developed to explore the application of machine learning and data analysis in career development and skill mapping.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Academic Context</h4>
+                    <p>Developed as part of a university coursework and research initiative in data science and artificial intelligence.</p>
+                    <p class="footer-muted">This system is intended for educational and research purposes only.</p>
+                </div>
+                <div class="footer-section footer-logo">
+                    <img src="../assets/img/university-logo.png" alt="University Logo">
+                    <span>University of Moratuwa</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SkillBridge Project · All rights reserved · Educational Use Only</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/skills.js"></script>
+</body>
+</html>

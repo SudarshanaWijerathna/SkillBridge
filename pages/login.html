@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge - Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+    <div class="global-background-overlay">
+        <i class="fa-solid fa-code bg-float-icon shape-bg-1"></i>
+        <i class="fa-solid fa-rocket bg-float-icon shape-bg-2"></i>
+    </div>
+
+    <div class="login-container glass-panel">
+        
+        <div class="login-hero">
+            <a href="home.html" class="hero-back-btn"><i class="fa-solid fa-arrow-left"></i> Home</a>
+
+            <i class="fa-solid fa-graduation-cap hero-shape shape-1"></i>
+            <i class="fa-solid fa-code hero-shape shape-2"></i>
+            <i class="fa-solid fa-chart-line hero-shape shape-3"></i>
+            <i class="fa-solid fa-rocket hero-shape shape-4"></i>
+            <i class="fa-solid fa-book-open hero-shape shape-5"></i>
+            <i class="fa-solid fa-brain hero-shape shape-6"></i>
+            <i class="fa-solid fa-lightbulb hero-shape shape-7"></i>
+            <i class="fa-solid fa-award hero-shape shape-8"></i>
+            <i class="fa-solid fa-user-graduate hero-shape shape-9"></i>
+            <i class="fa-solid fa-briefcase hero-shape shape-10"></i>
+            <i class="fa-solid fa-compass-drafting hero-shape shape-11"></i>
+            <i class="fa-solid fa-layer-group hero-shape shape-12"></i>
+            <i class="fa-solid fa-microchip hero-shape shape-13"></i>
+            <i class="fa-solid fa-pen-nib hero-shape shape-14"></i>
+            <i class="fa-solid fa-laptop-code hero-shape shape-15"></i>
+
+            <img src="../assets/img/laptop.png" class="hero-main-image" alt="SkillBridge Dashboard on Laptop">
+
+            <div class="hero-content">
+                <h1>Master Your<br><span>Future Career</span></h1>
+                <p>Start for free and get intelligent AI-driven insights to build your perfect skills roadmap.</p>
+            </div>
+        </div>
+
+        <div class="login-form-wrapper">
+            
+            <div class="nav-brand-small">
+                <svg viewBox="0 0 418.58 181.04"><path class="cls-1" d="M418.58,90.22c0,6.08-4.92,11-11,11-43.1,0-82.86-19.51-109.15-51.81v51.77c0,6.08-4.92,11-11,11s-11-4.92-11-11V31.64c-20.46,11.19-43.32,17.01-67.14,17.01-10.95,0-21.71-1.23-32.12-3.66l115.17,106.05h75.66c6.08,0,11,4.92,11,11s-4.92,11-11,11h-79.95c-2.76,0-5.42-1.04-7.45-2.91L141.53,42.08v127.96c0,6.07-4.92,11-11,11s-11-4.93-11-11V50.16c-26.29,31.86-65.77,51.06-108.53,51.06-6.08,0-11-4.92-11-11s4.92-11,11-11c47.82,0,90.76-28.46,109.4-72.51,1.33-3.13,4.03-5.48,7.32-6.35,3.29-.86,6.8-.16,9.5,1.91,20.82,15.95,45.75,24.38,72.07,24.38s49.23-7.76,69.52-22.49c2.02-2.54,5.13-4.16,8.62-4.16.15,0,.3,0,.45,0,1-.02,2,.09,2.98.35,3.29.87,5.99,3.22,7.32,6.35,18.64,44.05,61.58,72.51,109.4,72.51,6.08,0,11,4.93,11,11Z"/></svg>
+                <span class="nav-title">SkillBridge</span>
+            </div>
+
+            <div id="login-view" class="fade-in">
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Continue your learning journey</p>
+                </div>
+
+                <button class="btn-google">
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Continue with Google
+                </button>
+
+                <div class="divider">or Sign in with Email</div>
+
+                <form action="index.html">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" class="sb-input" placeholder="mail@example.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" class="sb-input" placeholder="••••••••••••">
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="check-group">
+                            <input type="checkbox"> Remember Me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+
+                <div class="form-footer">
+                    Not Registered Yet? <a id="show-signup">Create an account</a>
+                </div>
+            </div>
+
+            <div id="signup-view" class="hidden fade-in">
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                    <p>Join SkillBridge for free</p>
+                </div>
+
+                <button class="btn-google">
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Sign up with Google
+                </button>
+
+                <div class="divider">or Sign up with Email</div>
+
+                <form>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" class="sb-input" placeholder="John Doe">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" class="sb-input" placeholder="mail@example.com">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" class="sb-input" placeholder="Create a password">
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="check-group">
+                            <input type="checkbox" required> I agree to Terms & Privacy
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-login">Create Account</button>
+                </form>
+
+                <div class="form-footer">
+                    Already have an account? <a id="show-login">Login here</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/auth.js"></script>
+
+</body>
+</html>

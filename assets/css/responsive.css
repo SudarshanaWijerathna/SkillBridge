@@ -1,0 +1,31 @@
+@media (max-width: 900px) {
+    /* Login Page */
+    .login-container { grid-template-columns: 1fr; max-width: 500px; min-height: auto; }
+    .login-hero { display: none; }
+    .login-form-wrapper { padding: 40px 30px; }
+
+    /* Home & Contact */
+    .contact-hero h1, .leftside-hero h1 { font-size: 36px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero-content { flex-direction: column; text-align: center; }
+    .rightside-hero { justify-content: center; margin-top: 40px; }
+    .rightside-hero img { max-width: 80%; }
+    
+    /* Dashboard */
+    .dashboard-header { flex-direction: column; margin-top: 100px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .roadmap-split-container { flex-direction: column; height: auto; }
+    .map-pane { height: 400px; border-right: none; border-bottom: 1px solid var(--glass-border); }
+    .courses-pane { height: 300px; }
+    .timetable-header-row { display: none; }
+    .schedule-row { grid-template-columns: 1fr; gap: 8px; position: relative; padding: 15px; }
+    .status-check { position: absolute; top: 15px; right: 15px; }
+
+    /* Layout Common */
+    .reva-footer-container { grid-template-columns: 1fr; text-align: center; }
+    .footer-logo { margin-top: 30px; }
+    .navbar { width: 95%; top: 15px; }
+    .nav-links { display: none; }
+    .map-header-static { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .skill-gap-alert { width: 90%; left: 5%; top: 100px; }
+}

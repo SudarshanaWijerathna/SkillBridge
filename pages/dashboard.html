@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge - Student Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+    <div class="global-background-overlay">
+        <i class="fa-solid fa-graduation-cap bg-float-icon" style="top: 10%; left: 5%; font-size: 60px;"></i>
+        <i class="fa-solid fa-code-branch bg-float-icon" style="top: 20%; right: 10%; font-size: 80px; animation-delay: 1s;"></i>
+        <i class="fa-solid fa-laptop-code bg-float-icon" style="bottom: 15%; left: 10%; font-size: 50px; animation-delay: 2s;"></i>
+        <i class="fa-solid fa-chart-line bg-float-icon" style="bottom: 30%; right: 5%; font-size: 70px; animation-delay: 0.5s;"></i>
+        <i class="fa-solid fa-brain bg-float-icon" style="top: 15%; right: 30%; font-size: 45px; animation-delay: 1.5s;"></i>
+    </div>
+
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <svg class="nav-logo-svg" width="36" height="36" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418.58 181.04"><defs><style>.cls-1 { fill: #4445ff; stroke-width: 0px; }</style></defs><path class="cls-1" d="M418.58,90.22c0,6.08-4.92,11-11,11-43.1,0-82.86-19.51-109.15-51.81v51.77c0,6.08-4.92,11-11,11s-11-4.92-11-11V31.64c-20.46,11.19-43.32,17.01-67.14,17.01-10.95,0-21.71-1.23-32.12-3.66l115.17,106.05h75.66c6.08,0,11,4.92,11,11s-4.92,11-11,11h-79.95c-2.76,0-5.42-1.04-7.45-2.91L141.53,42.08v127.96c0,6.07-4.92,11-11,11s-11-4.93-11-11V50.16c-26.29,31.86-65.77,51.06-108.53,51.06-6.08,0-11-4.92-11-11s4.92-11,11-11c47.82,0,90.76-28.46,109.4-72.51,1.33-3.13,4.03-5.48,7.32-6.35,3.29-.86,6.8-.16,9.5,1.91,20.82,15.95,45.75,24.38,72.07,24.38s49.23-7.76,69.52-22.49c2.02-2.54,5.13-4.16,8.62-4.16.15,0,.3,0,.45,0,1-.02,2,.09,2.98.35,3.29.87,5.99,3.22,7.32,6.35,18.64,44.05,61.58,72.51,109.4,72.51,6.08,0,11,4.93,11,11Z"/></svg>
+                <span class="nav-title">SkillBridge</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li class="selected"><a href="#">Dashboard</a></li>
+                <li><a href="roadmaps.html">Roadmaps</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <a href="#" class="btn-outline">Sign Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="dashboard-header">
+            <div class="user-welcome">
+                <h1>👋 Welcome back, Isuru</h1>
+                <h2>Target Career: <span>Data Scientist</span></h2>
+                <p style="color:var(--text-secondary); line-height: 1.6;">You are on track! Based on your recent progress, we've updated your weekly schedule to focus on Python visualization libraries.</p>
+                <br>
+                <a href="#timetable" class="btn-primary">View Today's Tasks</a>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card stat-readiness">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <div>
+                        <div class="stat-value">62%</div>
+                        <div class="stat-label">Career Readiness</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-skills">
+                    <div class="stat-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div>
+                        <div class="stat-value">18</div>
+                        <div class="stat-label">Skills Identified</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-gaps">
+                    <div class="stat-icon"><i class="fa-solid fa-xmark"></i></div>
+                    <div>
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Skill Gaps</div>
+                    </div>
+                </div>
+                <div class="stat-card stat-demand">
+                    <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div>
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">High Demand</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="dashboard-section-title">Your Personalized Career Roadmap</h3>
+        <p class="section-subtext">Based on current job market demand for Data Science roles in Sri Lanka.</p>
+
+        <div class="glass-panel roadmap-split-container">
+            <div class="map-pane">
+                <div class="roadmap-wrapper" id="roadmapWrapper">
+                    <div id="roadmap-container"></div>
+                </div>
+                <div style="position: absolute; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px;">
+                     <button onclick="zoomIn()" style="width:36px; height:36px; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:12px; cursor:pointer;"><i class="fa-solid fa-plus"></i></button>
+                     <button onclick="zoomOut()" style="width:36px; height:36px; background:var(--glass-bg); border:1px solid var(--glass-border); border-radius:12px; cursor:pointer;"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="courses-pane">
+                <div class="courses-header">
+                    <h3>Learning Resources</h3>
+                    <span class="selected-skill-label" id="skillLabel">Select a node to view</span>
+                </div>
+                <div class="courses-scroll-area" id="coursesList">
+                    <div style="text-align: center; color: var(--text-secondary); margin-top: 50px;">
+                        <i class="fa-solid fa-arrow-left" style="font-size: 24px; margin-bottom: 10px;"></i>
+                        <p>Click on any roadmap point<br>to view courses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="timetable">
+            <h3 class="dashboard-section-title">
+                Your AI-Generated Learning Schedule
+                <span class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Generated</span>
+            </h3>
+            <p class="section-subtext">Optimized based on your career goal and available time to close skill gaps.</p>
+
+            <div class="timetable-meta">
+                <div class="meta-tag"><i class="fa-regular fa-clock"></i> Available: 2 hours/day</div>
+                <div class="meta-tag"><i class="fa-solid fa-bullseye"></i> Goal: Close 6 Gaps</div>
+                <div class="meta-tag"><i class="fa-solid fa-layer-group"></i> Focus: Python, SQL, ML</div>
+            </div>
+
+            <div class="glass-panel timetable-card">
+                <div class="timetable-header-row">
+                    <div>Day</div>
+                    <div>Focus Skill</div>
+                    <div>Specific Task</div>
+                    <div>Duration</div>
+                    <div style="text-align: center;">Status</div>
+                </div>
+
+                <div class="schedule-row row-completed">
+                    <div class="day-col">Monday</div>
+                    <div><span class="focus-badge focus-python">Python</span></div>
+                    <div class="task-desc">Basics: Variables, Loops & Functions exercises</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 2 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check completed" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="schedule-row row-completed">
+                    <div class="day-col">Tuesday</div>
+                    <div><span class="focus-badge focus-sql">SQL</span></div>
+                    <div class="task-desc">Writing Basic Queries (SELECT, WHERE, JOIN)</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 2 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check completed" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="schedule-row row-completed">
+                    <div class="day-col">Wednesday</div>
+                    <div><span class="focus-badge focus-stats">Statistics</span></div>
+                    <div class="task-desc">Mean, Median, Mode & Standard Deviation</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 2 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check completed" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="day-col">Thursday</div>
+                    <div><span class="focus-badge focus-ml">Machine Learning</span></div>
+                    <div class="task-desc">Intro to Supervised Learning Models</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 2 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="day-col">Friday</div>
+                    <div><span class="focus-badge focus-python">Python</span></div>
+                    <div class="task-desc">Mini Project: Analyze a CSV dataset</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 2 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="schedule-row">
+                    <div class="day-col">Saturday</div>
+                    <div><span class="focus-badge focus-python">Revision</span></div>
+                    <div class="task-desc">Practice Coding Challenges (LeetCode Easy)</div>
+                    <div class="duration-col"><i class="fa-regular fa-hourglass"></i> 1.5 hrs</div>
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <div class="status-check" onclick="toggleTask(this)"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="week-progress">
+                    <div class="progress-label">Week Progress</div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 42%;"></div>
+                    </div>
+                    <div class="progress-text">3 / 7 Days Completed</div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="reva-footer">
+            <div class="reva-footer-container">
+                <div class="footer-section">
+                    <h3>SkillBridge</h3>
+                    <p>SkillBridge is an AI-powered platform developed to explore the application of machine learning and data analysis in career development.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Academic Context</h4>
+                    <p>Developed as part of a university coursework and research initiative in data science and artificial intelligence.</p>
+                    <p class="footer-muted">This system is intended for educational and research purposes only.</p>
+                </div>
+                <div class="footer-section footer-logo">
+                    <img src="../assets/img/university-logo.png" alt="University Logo" style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 5px;">
+                    <span>University of Moratuwa</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SkillBridge Project · All rights reserved · Educational Use Only</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/skills.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
